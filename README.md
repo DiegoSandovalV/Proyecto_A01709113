@@ -6,6 +6,7 @@ Una tienda de musica busca una forma de mejorar su administracion de productos y
 
 # Funcionalidad
 
-El programa permite: 
+El programa permite:
+
 -Ver las caracteristicas de 1 objeto de cada clase, aplicando despues sus metodos para observar si estos tienen un correcto funcionamiento y luego mostrar en la pantalla de nuevo los objetos pero con los cambios realizados
 
