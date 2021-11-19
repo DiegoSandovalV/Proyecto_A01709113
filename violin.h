@@ -1,43 +1,59 @@
-//Clase Violin
+/*
+ * Proyecto A01709113
+ * Sandoval Vargas Diego Ernesto
+ * A01709113
+ * 18/11/2021
+ */
 
+
+/*Clase Violin
+ * Contiene los metodos genericos (setters y getters) para el manejo de del objeto en este caso
+ * del violin. Tambien contienen un metodo que permite saber el porcentaje de ventas de dicho objeto
+*/
 #include<string>
 
 using namespace std;
 
 class Violin {
 
-    //Atributos
 private:
-    string madera; //tipo de madera
     string marca;
-    string cuerdas; //tipo de cuerdas
+    string modelo;
+    string sonido;
+    string cuerdas;
+    string barbada;
+
+
+
+public:
     int unidades; //Cantidad de producto que se tiene para vender
     int ventas;
 
-    //Constructores y metodos
-public:
-
     //Constructor vacio
-    Violin() : madera(""), marca(""), cuerdas(""), unidades(0), ventas(0) {};
+    Violin() : marca(""), modelo(""), sonido(""), cuerdas(""),barbada(""),unidades(0), ventas(0) {};
 
     //Constructor
-    Violin(string mad, string mar, string cuer, int un, int ven) : madera(mad), marca(mar), cuerdas(cuer),
-                                                                   unidades(un), ventas(ven) {};
+    Violin(string mar,string mod,string son,string cuer, string bar,int un, int ven) : marca(mar),modelo(mod),sonido(son),cuerdas(cuer),
+                                                                                        barbada(bar),unidades(un), ventas(ven) {};
 
 
     //Metodos
 
     //getters
-    string get_madera();
     string get_marca();
+    string get_modelo();
+    string get_sonido();
     string get_cuerdas();
+    string get_barbada();
     int get_unidades();
     int get_ventas();
 
     //setters
-    void set_madera(string);
     void set_marca(string);
+    void set_modelo(string);
+    void set_sonido(string);
     void set_cuerdas(string);
+    void set_barbada(string);
     void set_unidades(int);
     void set_ventas(int);
 
@@ -49,16 +65,25 @@ public:
 
 //Getters
 
-string Violin::get_madera() {
-    return madera;
-}
 
 string Violin::get_marca() {
     return marca;
 }
 
+string Violin::get_modelo() {
+    return modelo;
+}
+
+string Violin::get_sonido() {
+    return sonido;
+}
+
 string Violin::get_cuerdas() {
     return cuerdas;
+}
+
+string Violin::get_barbada() {
+    return barbada;
 }
 
 int Violin::get_unidades() {
@@ -71,16 +96,24 @@ int Violin::get_ventas() {
 
 //Setters
 
-void Violin::set_madera(string mar) {
-    madera = mar;
+void Violin::set_marca(string mar) {
+    marca = mar;
 }
 
-void Violin::set_marca(string mad) {
-    marca = mad;
+void Violin::set_modelo(string mod) {
+    modelo = mod;
+}
+
+void Violin::set_sonido(string son) {
+    sonido = son;
 }
 
 void Violin::set_cuerdas(string cuer) {
     cuerdas = cuer;
+}
+
+void Violin::set_barbada(string bar) {
+    barbada = bar;
 }
 
 void Violin::set_unidades(int un) {
@@ -90,7 +123,6 @@ void Violin::set_unidades(int un) {
 void Violin::set_ventas(int ven) {
     ventas = ven;
 }
-
 //otros metodos
 
 string Violin::porcentaje_ventas(){
