@@ -31,7 +31,7 @@ public:
     }
 
     //Constructor
-    Guitarra(string mar, string mod, string son,string cuer, string tras, int uni, int ven):Instrumento(mar, mod, son,
+    Guitarra(string mar, string mod, float pre,string cuer, string tras, int uni, int ven):Instrumento(mar, mod, pre,
                                                                                                      uni, ven) {
         cuerdas = cuer;
         trastes = tras;
