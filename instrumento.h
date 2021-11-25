@@ -26,7 +26,7 @@ private:
 
     string marca;
     string modelo;
-    float precio; //tipo de precio
+    float precio; 
 public:
 
     int unidades; //Cantidad de producto que se tiene para vender (stock)
