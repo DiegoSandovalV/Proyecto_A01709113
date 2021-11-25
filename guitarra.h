@@ -10,9 +10,10 @@
 * Contiene las variables que diferencian esta subclase de las demas, al combinar estas con las varriables de la clase padre (instrumento)
  * se obtiene un objeto de tipo Guitarra
 */
+#ifndef GUITARRA_H
+#define GUITARRA_H
 
 #include "instrumento.h"
-#include<string>
 using namespace std;
 
 class Guitarra : public Instrumento{
@@ -50,6 +51,10 @@ public:
     void set_cuerdas(string);
     void set_trastes(string);
 
+    //Metodo para mostrar las caracteristicas del objeto
+
+    string to_string();
+
 
 };
 
@@ -77,3 +82,12 @@ void Guitarra::set_trastes(string tras) {
     trastes = tras;
 }
 
+//Metodo para mostrar las caracteristicas del objeto
+
+string Guitarra::to_string() {
+    stringstream aux;
+    aux << marca <<" "<< modelo<<" "<< cuerdas<<" " << trastes ;
+    return aux.str();
+}
+
+#endif
