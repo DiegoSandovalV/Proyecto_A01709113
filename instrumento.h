@@ -26,17 +26,17 @@ private:
 
     string marca;
     string modelo;
-    string sonido; //tipo de sonido
+    float precio; //tipo de precio
 public:
 
     int unidades; //Cantidad de producto que se tiene para vender (stock)
     int ventas; //Cantidad de unidades que se vendieron
 
     //constructor default
-    Instrumento() : marca(""), modelo(""), sonido(""), unidades(0), ventas(0) {};
+    Instrumento() : marca(""), modelo(""), precio(0), unidades(0), ventas(0) {};
 
     //Construccion con entrada de datos
-    Instrumento(string mar, string mod, string son, int uni, int ven) : marca(mar), modelo(mod), sonido(son),
+    Instrumento(string mar, string mod, float pre, int uni, int ven) : marca(mar), modelo(mod), precio(pre),
                                                                       unidades(uni), ventas(ven) {};
 
 
@@ -45,14 +45,14 @@ public:
     //getters
     string get_marca();
     string get_modelo();
-    string get_sonido();
+    float get_precio();
     int get_unidades();
     int get_ventas();
 
     //setters
     void set_marca(string);
     void set_modelo(string);
-    void set_sonido(string);
+    void set_precio(float);
     void set_unidades(int);
     void set_ventas(int);
 
@@ -71,8 +71,8 @@ string Instrumento::get_modelo() {
     return modelo;
 }
 
-string Instrumento::get_sonido() {
-    return sonido;
+float Instrumento::get_precio() {
+    return precio;
 }
 
 int Instrumento::get_unidades() {
@@ -93,8 +93,8 @@ void Instrumento::set_modelo(string mod) {
     modelo = mod;
 }
 
-void Instrumento::set_sonido(string son) {
-    sonido = son;
+void Instrumento::set_precio(float pre) {
+    precio = pre;
 }
 
 void Instrumento::set_unidades(int un) {
