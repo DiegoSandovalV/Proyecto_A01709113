@@ -30,7 +30,7 @@ public:
     }
 
     //Constructor
-    Piano(string mar, string mod, string son,string sin, int num, int uni, int ven):Instrumento(mar, mod, son,
+    Piano(string mar, string mod, float pre,string sin, int num, int uni, int ven):Instrumento(mar, mod, pre,
                                                                                                      uni, ven) {
         sintetizador = sin;
         num_teclas = num;
