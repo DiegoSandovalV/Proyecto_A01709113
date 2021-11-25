@@ -26,4 +26,5 @@ Al ser un avance del proyecto no esta en su total funcionalidad para el usuario.
 Se han realizado las siguientes correcciones:
 
 1)Se han actualizado y ordenado los atributos y metodos de todas las clases, para tener una idea mas clara de como sera cuando se implemente la herencia 
+
 2)Se implemento Herencia usando la clase "Padre" Instrumento, las variables marca y modelo han pasado a ser de tipo publico, se agrego una funcion "to_string" en Guitarra que permite ver sus caracteristicas, mediante la agregacion se creo una clase llamada "Paquete_Guitarras" donde se pueden agrupar 3 objetos tipo guitarras diferentes, ver sus caracteristicas y aplicar la promocion de 20% de descuento (es decir hay una funcion que suma los precios de las 3 guitarras y regresa el precio final con descuento), se agregaron casos de prueba para observar el funcionamiento
