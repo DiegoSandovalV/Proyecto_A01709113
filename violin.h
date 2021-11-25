@@ -30,7 +30,7 @@ public:
     }
 
     //Constructor
-    Violin(string mar, string mod, string son,string cuer, string bar, int uni, int ven):Instrumento(mar, mod, son,
+    Violin(string mar, string mod, float pre,string cuer, string bar, int uni, int ven):Instrumento(mar, mod, pre,
                                                                                                      uni, ven) {
         cuerdas = cuer;
         barbada = bar;
