@@ -11,7 +11,6 @@
  * se obtiene un objeto de tipo Violin
 */
 #include "instrumento.h"
-#include<string>
 using namespace std;
 
 class Violin : public Instrumento{
