@@ -11,7 +11,6 @@
  * se obtiene un objeto de tipo Piano
 */
 #include "instrumento.h"
-#include<string>
 using namespace std;
 
 class Piano : public Instrumento{
