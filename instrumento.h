@@ -17,17 +17,18 @@
 
 #include <iostream>
 #include <string>
+#include<sstream>
 
 using namespace std;
 
 class Instrumento {
 
 private:
+    float precio;
 
+public:
     string marca;
     string modelo;
-    float precio; 
-public:
 
     int unidades; //Cantidad de producto que se tiene para vender (stock)
     int ventas; //Cantidad de unidades que se vendieron
