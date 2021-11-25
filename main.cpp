@@ -9,6 +9,7 @@ using namespace std;
 int main() {
 
     //Prueba de crear objeto de la clase Guitarra
+
     Guitarra guitarra1("Fender","Stratocaster","digital ", "Metal","medium", 10, 1);
 
     //Se mandan a llamar los getters para demostrar su funcionamiento
@@ -47,6 +48,7 @@ int main() {
     piano1.set_num_teclas(71);
     piano1.set_unidades(8);
     piano1.set_ventas(3);
+
     //Se vuelven a llamar los getters para revisar si las modificaciones se hicieron correctamente
     cout << "Piano 1: \n" << piano1.get_marca() << endl << piano1.get_modelo() << endl << piano1.get_sonido()
          << endl <<piano1.get_sintetizador() << endl << piano1.get_num_teclas()<<endl<<piano1.get_unidades() << endl << piano1.get_ventas()
