@@ -8,7 +8,7 @@ class Paquete_Guitarras{
 private:
     //Se crea el arreglo donde se van a guardar los objetos
     Guitarra guitarras[3];
-
+    int cant_actual = 0;
 
 
 public:
@@ -22,7 +22,7 @@ public:
     string mostrar_guitarras();
 
     //Metodo para calcular el precio final del producto con el descuento
-    float precio_total();
+    string precio_total();
 
 };
 
@@ -38,20 +38,35 @@ string Paquete_Guitarras::mostrar_guitarras() {
 
     stringstream aux;
     for(int i = 0 ; i < 3; i++){
-            aux << "Guitarra " << i <<":  "<<" "<< guitarras[i].to_string() << endl;
+            aux << "Guitarra " << i <<":  "<<" "<< guitarras[i].mostrar() << endl;
     }
     return aux.str();
 }
 
 
+
 //Metodo para calcular el precio final del producto con el descuento
-float Paquete_Guitarras::precio_total() {
-    float total;
+string Paquete_Guitarras::precio_total() {
+    float total, final;
     total = 0.0;
-    for(int i = 0;i < 3;i++){
-        total +=guitarras[i].get_precio();
+    final = 0.0;
+    stringstream aux;
+
+    for (int i = 0; i < cant_actual; i++) {
+        total += guitarras[i].get_precio();
     }
-    return total*0.8;
+
+    if (cant_actual <= 5) {
+        final = total * (1 - (0.05 * cant_actual));
+    } else {
+        final = total * .6;
+    }
+    aux << "El precio inicial del paquete fue: $" << total << "\nEl precio con descuento es: $"
+        << final << "\nEl cliente Ahorro: $" << total - final;
+    return aux.str();
+
 }
-//////
+
+
+
 #endif
