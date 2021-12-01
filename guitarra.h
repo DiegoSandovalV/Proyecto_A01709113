@@ -53,7 +53,7 @@ public:
 
     //Metodo para mostrar las caracteristicas del objeto
 
-    string to_string();
+    string mostrar();
 
 
 };
@@ -84,7 +84,7 @@ void Guitarra::set_trastes(string tras) {
 
 //Metodo para mostrar las caracteristicas del objeto
 
-string Guitarra::to_string() {
+string Guitarra::mostrar() {
     stringstream aux;
     aux << marca <<" "<< modelo<<" "<< cuerdas<<" " << trastes ;
     return aux.str();
