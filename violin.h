@@ -49,6 +49,8 @@ public:
     void set_barbada(string);
 
 
+    //Metodo para mostrar las caracteristicas del objeto
+    string mostrar();
 };
 
 
@@ -74,4 +76,9 @@ void Violin::set_cuerdas(string cuer) {
 void Violin::set_barbada(string bar) {
     barbada = bar;
 }
-
+//Metodo para mostrar las caracteristicas del objeto
+string Violin::mostrar() {
+    stringstream aux;
+    aux << marca <<" "<< modelo<<" "<< cuerdas<<" " << barbada ;
+    return aux.str();
+}
