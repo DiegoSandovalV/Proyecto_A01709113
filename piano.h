@@ -48,7 +48,8 @@ public:
     void set_sintetizador(string);
     void set_num_teclas(int);
 
-
+    //Metodo para mostrar las caracteristicas del objeto
+    string mostrar();
 };
 
 
@@ -73,5 +74,12 @@ void Piano::set_sintetizador(string cuer) {
 
 void Piano::set_num_teclas(int num) {
     num_teclas = num;
+}
+
+//Metodo para mostrar las caracteristicas del objeto
+string Piano::mostrar() {
+    stringstream aux;
+    aux << marca <<" "<< modelo<<" "<< sintetizador<<" " << num_teclas ;
+    return aux.str();
 }
 
