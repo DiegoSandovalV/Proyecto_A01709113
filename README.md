@@ -19,7 +19,7 @@ El programa solo corre en la consola y esta hecho con c++ standard por lo que co
 compilar con: "g++ guitarra.h piano.h violin.h main.cpp"
 correr en windows: "a.exe"
 
-Al ser un avance del proyecto no esta en su total funcionalidad para el usuario.
+
 
 # Correcciones
 
