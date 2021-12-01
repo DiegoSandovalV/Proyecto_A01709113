@@ -7,16 +7,16 @@
 
 using namespace std;
 
+
 int main() {
+
 
     //Prueba de crear objeto de la clase Guitarra
 
     Guitarra guitarra1("Fender","Stratocaster",55, "Metal","medium", 10, 1);
 
     //Se mandan a llamar los getters para demostrar su funcionamiento
-    cout << "Guitarra 1: \n" << guitarra1.get_marca() << endl << guitarra1.get_modelo() << endl << guitarra1.get_precio()
-         << endl << guitarra1.get_cuerdas() << endl << guitarra1.get_trastes()<<endl<<guitarra1.get_unidades() << endl << guitarra1.get_ventas()
-         << endl<<guitarra1.porcentaje_ventas()<<endl<<endl;
+    cout << "\nGuitarra 1: \n" << guitarra1.mostrar()<<endl;
 
     //Se mandan a llamar los setters para comprobar funcionamiento
     guitarra1.set_marca("Yamaha");
@@ -28,19 +28,14 @@ int main() {
     guitarra1.set_ventas(3);
 
     //Se vuelven a llamar los getters para revisar si las modificaciones se hicieron correctamente
-    cout << "Guitarra 1: \n" << guitarra1.get_marca() << endl << guitarra1.get_modelo() << endl << guitarra1.get_precio()
-         << endl << guitarra1.get_cuerdas() << endl << guitarra1.get_trastes()<<endl<<guitarra1.get_unidades() << endl << guitarra1.get_ventas()
-         << endl<<guitarra1.porcentaje_ventas()<<endl<<endl;
+    cout << "\nGuitarra 1: \n" << guitarra1.mostrar()<<endl;
 
 
     //Prueba de crear objeto de la clase Piano
     Piano piano1("Yamaha","Grand",99.4,"Sin sintetizador",88,13,2);
 
     //Se mandan a llamar los getters para demostrar su funcionamiento
-    cout << "Piano 1: \n" << piano1.get_marca() << endl << piano1.get_modelo() << endl << piano1.get_precio()
-         << endl <<piano1.get_sintetizador() << endl << piano1.get_num_teclas()<<endl<<piano1.get_unidades() << endl << piano1.get_ventas()
-         << endl<<piano1.porcentaje_ventas()<<endl<<endl;
-
+    cout << "\nPiano 1: \n" << piano1.mostrar()<<endl;
     //Se mandan a llamar los setters para comprobar funcionamiento
     piano1.set_marca("Broadwood");
     piano1.set_modelo("Cottage");
@@ -51,17 +46,13 @@ int main() {
     piano1.set_ventas(3);
 
     //Se vuelven a llamar los getters para revisar si las modificaciones se hicieron correctamente
-    cout << "Piano 1: \n" << piano1.get_marca() << endl << piano1.get_modelo() << endl << piano1.get_precio()
-         << endl <<piano1.get_sintetizador() << endl << piano1.get_num_teclas()<<endl<<piano1.get_unidades() << endl << piano1.get_ventas()
-         << endl<<piano1.porcentaje_ventas()<<endl<<endl;
+    cout << "\nPiano 1: \n" << piano1.mostrar()<<endl;
 
     //Prueba de crear objeto de la clase Piano
     Violin violin1("Yamaha","Artida",88,"Nylon","No incluido",8,8);
 
     //Se mandan a llamar los getters para demostrar su funcionamiento
-    cout << "Violin 1: \n" << violin1.get_marca() << endl <<violin1.get_modelo() << endl << violin1.get_precio()
-         << endl << violin1.get_cuerdas() << endl << violin1.get_barbada()<<endl<<violin1.get_unidades() << endl << guitarra1.get_ventas()
-         << endl<<violin1.porcentaje_ventas()<<endl<<endl;
+    cout << "\nViolin 1: \n" << violin1.mostrar()<<endl;
 
 
     //Se mandan a llamar los setters para comprobar funcionamiento
@@ -74,9 +65,7 @@ int main() {
     violin1.set_ventas(7);
 
     //Se vuelven a llamar los getters para revisar si las modificaciones se hicieron correctamente
-    cout << "Violin 1: \n" << violin1.get_marca() << endl <<violin1.get_modelo() << endl << violin1.get_precio()
-        << endl << violin1.get_cuerdas() << endl << violin1.get_barbada()<<endl<<violin1.get_unidades() << endl << guitarra1.get_ventas()
-        << endl<<violin1.porcentaje_ventas()<<endl<<endl;
+    cout << "\nViolin 1: \n" << violin1.mostrar()<<endl;
 
 
     //Se crean otras 2 guitarras para el paquete con descuento
@@ -92,8 +81,8 @@ int main() {
     paquete1.asigna_guitarra(guitarra3,2);
 
     //Se muestran sus caracteristicas y el precio del paquete
-    cout<<"Paquete 1:"<<endl<<paquete1.mostrar_guitarras();
-    cout<<"Precio con descuento: "<<paquete1.precio_total();
+    cout<<"\nPaquete 1:"<<endl<<paquete1.mostrar_guitarras()<<endl;
+    cout<<"\nPrecio: \n"<<paquete1.precio_total()<<endl;
 
     return 0;
 
