@@ -10,6 +10,9 @@
  * Contiene las variables que diferencian esta subclase de las demas, al combinar estas con las varriables de la clase padre (instrumento)
  * se obtiene un objeto de tipo Violin
 */
+
+#ifndef VIOLIN_H
+#define VIOLIN_H
 #include "instrumento.h"
 using namespace std;
 
@@ -76,9 +79,12 @@ void Violin::set_cuerdas(string cuer) {
 void Violin::set_barbada(string bar) {
     barbada = bar;
 }
+
 //Metodo para mostrar las caracteristicas del objeto
 string Violin::mostrar() {
     stringstream aux;
-    aux << marca <<" "<< modelo<<" "<< cuerdas<<" " << barbada ;
+    aux << marca << " " << modelo << " " << cuerdas << " " << barbada << "\n" << porcentaje_ventas() << endl;
     return aux.str();
 }
+
+#endif
