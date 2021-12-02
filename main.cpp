@@ -3,86 +3,125 @@
 #include "guitarra.h"
 #include "piano.h"
 #include "violin.h"
-#include "paquete_guitarras.h"
+#include "paquete.h"
 
 using namespace std;
 
+void menu() {
+    cout << "\nMenu: " << endl;
+    cout << "1. Mostrar guitarras" << endl;
+    cout << "2. Mostrar Pianos" << endl;
+    cout << "3. Mostrar Violines" << endl;
+    cout << "4. Mostrar paquete Guitarras" << endl;
+    cout << "5. Mostrar paquete Pianos" << endl;
+    cout << "6. Mostrar paquete Violines" << endl;
+    cout << "7. Precio final del paquete de Guitarras" << endl;
+    cout << "8. Precio final del paquete de Pianos" << endl;
+    cout << "9. Precio final del paquete de Violines" << endl;
+    cout << "0. Salir" << endl;
+
+}
 
 int main() {
 
+    //Ejemplos de objetos clase Guitarra
+    Guitarra guitarra1("Fender", "Stratocaster", 55, "Metal", "medium", 10, 1);
+    Guitarra guitarra2("ibanies", "Classic", 99, "Metal", "medium", 10, 1);
+    Guitarra guitarra3("yamaha", "Acustica", 88, "Metal", "medium", 10, 1);
 
-    //Prueba de crear objeto de la clase Guitarra
+    //Ejemplos de objetos clase Piano
+    Piano piano1("Yamaha", "Grand", 99.4, "Sin sintetizador", 88, 13, 2);
+    Piano piano2("Nux", "Privia", 158.9, "Modular", 60, 10, 0);
+    Piano piano3("Casio", "Clasico", 69.99, "Modular despegable", 63, 5, 1);
 
-    Guitarra guitarra1("Fender","Stratocaster",55, "Metal","medium", 10, 1);
-
-    //Se mandan a llamar los getters para demostrar su funcionamiento
-    cout << "\nGuitarra 1: \n" << guitarra1.mostrar()<<endl;
-
-    //Se mandan a llamar los setters para comprobar funcionamiento
-    guitarra1.set_marca("Yamaha");
-    guitarra1.set_modelo("Parlor");
-    guitarra1.set_precio(99.4);
-    guitarra1.set_cuerdas("Nylon");
-    guitarra1.set_trastes("bajos");
-    guitarra1.set_unidades(8);
-    guitarra1.set_ventas(3);
-
-    //Se vuelven a llamar los getters para revisar si las modificaciones se hicieron correctamente
-    cout << "\nGuitarra 1: \n" << guitarra1.mostrar()<<endl;
+    //Ejemplos de objetos clase Violin
+    Violin violin1("Yamaha", "Artida", 88, "Nylon", "No incluido", 8, 8);
+    Violin violin2("Primavera", "Divarius", 99.99, "Metal", "Cuero", 10, 1);
+    Violin violin3("Gewa", "Allegro", 199.99, "Hibridas", "Plastico", 5, 2);
 
 
-    //Prueba de crear objeto de la clase Piano
-    Piano piano1("Yamaha","Grand",99.4,"Sin sintetizador",88,13,2);
-
-    //Se mandan a llamar los getters para demostrar su funcionamiento
-    cout << "\nPiano 1: \n" << piano1.mostrar()<<endl;
-    //Se mandan a llamar los setters para comprobar funcionamiento
-    piano1.set_marca("Broadwood");
-    piano1.set_modelo("Cottage");
-    piano1.set_precio(99.3);
-    piano1.set_sintetizador("Modular");
-    piano1.set_num_teclas(71);
-    piano1.set_unidades(8);
-    piano1.set_ventas(3);
-
-    //Se vuelven a llamar los getters para revisar si las modificaciones se hicieron correctamente
-    cout << "\nPiano 1: \n" << piano1.mostrar()<<endl;
-
-    //Prueba de crear objeto de la clase Piano
-    Violin violin1("Yamaha","Artida",88,"Nylon","No incluido",8,8);
-
-    //Se mandan a llamar los getters para demostrar su funcionamiento
-    cout << "\nViolin 1: \n" << violin1.mostrar()<<endl;
-
-
-    //Se mandan a llamar los setters para comprobar funcionamiento
-    violin1.set_marca("Yamaha");
-    violin1.set_modelo("Braviol");
-    violin1.set_precio(89);
-    violin1.set_cuerdas("Metal");
-    violin1.set_barbada("Plastico");
-    violin1.set_unidades(5);
-    violin1.set_ventas(7);
-
-    //Se vuelven a llamar los getters para revisar si las modificaciones se hicieron correctamente
-    cout << "\nViolin 1: \n" << violin1.mostrar()<<endl;
-
-
-    //Se crean otras 2 guitarras para el paquete con descuento
-    Guitarra guitarra2("ibañex","a",99, "Metal","medium", 10, 1);
-    Guitarra guitarra3("yamaha","acustica",88, "Metal","medium", 10, 1);
-
-    //Se crea el paquete
-    Paquete_Guitarras paquete1;
+    //Se crea el paquete ejemplo de guitarras
+    Paquete paquete1;
 
     //Se le asignan las guitarras al paquete
-    paquete1.asigna_guitarra(guitarra1,0);
-    paquete1.asigna_guitarra(guitarra2,1);
-    paquete1.asigna_guitarra(guitarra3,2);
+    paquete1.asigna(guitarra1);
+    paquete1.asigna(guitarra2);
+    paquete1.asigna(guitarra3);
 
-    //Se muestran sus caracteristicas y el precio del paquete
-    cout<<"\nPaquete 1:"<<endl<<paquete1.mostrar_guitarras()<<endl;
-    cout<<"\nPrecio: \n"<<paquete1.precio_total()<<endl;
+
+    //Se le asignan los Pianos al paquete
+    paquete1.asigna(piano1);
+    paquete1.asigna(piano2);
+    paquete1.asigna(piano3);
+
+
+    //Se le asignan los Violines al paquete
+    paquete1.asigna(violin1);
+    paquete1.asigna(violin2);
+    paquete1.asigna(violin3);
+
+    //Variable de la opcion del menu
+    int op = 1;
+
+    //Ciclo para que el menu no se cierre hasta que el usuario eliga salir
+    while (op < 9 && op > 0) {
+        menu();
+
+        //Se lee la opcion
+        cin >> op;
+
+
+        //Switch donde el usuario puede elegir la opcion
+
+        switch (op) {
+
+            //Se muestran las guitarras actuales
+            case 1:
+                cout << guitarra1.mostrar() << guitarra2.mostrar() << guitarra3.mostrar();
+                break;
+
+                //Se muestran los Pianos actuales
+            case 2:
+                cout << piano1.mostrar() << piano2.mostrar() << piano3.mostrar();
+                break;
+
+                //Se muestran los Violines actuales
+            case 3:
+                cout << violin1.mostrar() << violin2.mostrar() << violin3.mostrar();
+                break;
+
+                //Se muestran las guitarras del paquete
+            case 4:
+                cout << paquete1.mostrar_guitarras();
+                break;
+
+                //Se muestrab los Pianos del paquete
+            case 5:
+                cout << paquete1.mostrar_pianos();
+                break;
+
+                //Se muestran los Violines del paquete
+            case 6:
+                cout << paquete1.mostrar_violines();
+                break;
+
+                //Se Muestra el precio con descuento de el paquete de Guitarras
+            case 7:
+                cout<<paquete1.precio_total_guitarras();
+                break;
+
+                //Se Muestra el precio con descuento de el paquete de Pianos
+            case 8:
+                cout<<paquete1.precio_total_pianos();
+                break;
+
+                //Se Muestra el precio con descuento de el paquete de Violines
+            case 9:
+                cout<<paquete1.precio_total_violines();
+                break;
+        }
+    }
+
 
     return 0;
 
