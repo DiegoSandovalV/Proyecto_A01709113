@@ -10,6 +10,9 @@
 * Contiene las variables que diferencian esta subclase de las demas, al combinar estas con las varriables de la clase padre (instrumento)
  * se obtiene un objeto de tipo Piano
 */
+
+#ifndef PIANO_H
+#define PIANO_H
 #include "instrumento.h"
 using namespace std;
 
@@ -79,7 +82,8 @@ void Piano::set_num_teclas(int num) {
 //Metodo para mostrar las caracteristicas del objeto
 string Piano::mostrar() {
     stringstream aux;
-    aux << marca <<" "<< modelo<<" "<< sintetizador<<" " << num_teclas ;
+    aux << marca << " " << modelo << " " << sintetizador << " " << num_teclas << "\n" << porcentaje_ventas() << endl;
     return aux.str();
 }
 
+#endif
