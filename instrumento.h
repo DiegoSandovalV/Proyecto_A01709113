@@ -113,7 +113,10 @@ string Instrumento::porcentaje_ventas(){
     float p;
     p = (float) ventas / (float) unidades * 100; // se multiplica * 100 para que se vea mejor el numero
 
-    if(unidades>ventas) {
+    if(ventas==0){
+        return "No ha tenido ventas el producto";
+    }
+    else if(unidades>ventas) {
         return "El porcentaje de ventas es: " + to_string(p) + "%";
     }else if(unidades==ventas){
         return "Se han vendido todas las unidades";
