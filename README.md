@@ -11,7 +11,7 @@ Junto a esto la Tienda tiene una promocion, donde por la compra de un paquete de
 
 El programa permite:
 
--Crear 3 tipos de objetos (Guitarra, piano y violin), ver sus caracteristicas (marca,modelo,precio, etc) y la cantidad de producto que se tiene (unidades/stock) y las ventas, para finalmente recibir el porcentaje de ventas de ese producto, junto a eso tambien es posible agrupar N objetos de los 3 tipos (Guitarras, Pianos y Violines) en arrays para crear un "paquete" con promocion donde el precio final del paquete tiene un 5% de descuento por cada Instrumento hasta un maximo de 40% de descuento sobre el precio final.
+-Crear 3 tipos de objetos (Guitarra, piano y violin), ver sus caracteristicas (marca,modelo,precio, etc) y la cantidad de producto que se tiene (unidades/stock) y las ventas, para finalmente recibir el porcentaje de ventas de ese producto, junto a eso tambien es posible agrupar N cantidad de objetos de los 3 tipos (Guitarras, Pianos y Violines) en arrays para crear un "paquete" con promocion donde el precio final del paquete tiene un 5% de descuento por cada Instrumento(del mismo tipo) hasta un maximo de 40% de descuento sobre el precio final.
 
 # Consideraciones
 
