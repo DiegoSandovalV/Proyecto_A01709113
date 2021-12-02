@@ -1,71 +1,159 @@
-#ifndef PAQUETE_GUITARRAS_H
-#define PAQUETE_GUITARRAS_H
+#ifndef PAQUETE_H
+#define PAQUETE_H
 
 #include "guitarra.h"
+#include "piano.h"
+#include "violin.h"
 
-class Paquete_Guitarras{
+class Paquete{
 
 private:
-    //Se crea el arreglo donde se van a guardar los objetos
-    Guitarra guitarras[3];
-    int cant_actual = 0;
+    //Se crean los arreglos donde se van a guardar los objetos
+    Guitarra guitarras[50];
+    int cant_guitarras = 0;
 
+    Piano pianos[50];
+    int cant_pianos = 0;
+
+    Violin violines[50];
+    int cant_violines = 0;
 
 public:
-    //constructor default
-    Paquete_Guitarras(){};
+    //constructor default del paquete
+    Paquete(){};
 
-    //Metodo para asignar el objeto tipo Guitarra
-    void asigna_guitarra(Guitarra,int );
+    //Metodo para asignar el objeto al arreglo
+    void asigna(Guitarra);
+    void asigna(Piano);
+    void asigna(Violin);
 
-    //Metodo para mostrar las guitarras que hay en el paquete
+
+    //Metodo para mostrar los objetos de los arreglos
     string mostrar_guitarras();
+    string mostrar_pianos();
+    string mostrar_violines();
 
-    //Metodo para calcular el precio final del producto con el descuento
-    string precio_total();
 
+
+    //Metodo para calcular el precio final del paquete con descuento
+    string precio_total_guitarras();
+    string precio_total_pianos();
+    string precio_total_violines();
 };
 
 
-//Metodo de asignacion
-void Paquete_Guitarras::asigna_guitarra(Guitarra gui, int num) { //num se refiere al numero de guitarra que se esta agregando
-    guitarras[num] = gui;
-    cant_actual+=1;
+//Metodo de asignacion de guitarras
+void Paquete::asigna(Guitarra gui) {
+    guitarras[cant_guitarras] = gui;
+    cant_guitarras+=1;
 }
 
-//Metodo para mostrar las guitarras que hay en el paquete
-string Paquete_Guitarras::mostrar_guitarras() {
+//Metodo de asignacion de Pianos
+void Paquete::asigna(Piano pi) {
+    pianos[cant_pianos] = pi;
+    cant_pianos+=1;
+}
 
+//Metodo de asignacion de Violines
+void Paquete::asigna(Violin vi) {
+    violines[cant_violines] = vi;
+    cant_violines+=1;
+}
+
+
+//Metodo para mostrar las guitarras que hay en el paquete
+string Paquete::mostrar_guitarras() {
     stringstream aux;
-    for(int i = 0 ; i < 3; i++){
-            aux << "Guitarra " << i <<":  "<<" "<< guitarras[i].mostrar() << endl;
+    for(int i = 0 ; i < cant_guitarras; i++){
+            aux << "Guitarra " << i <<":  "<< guitarras[i].mostrar() << endl;
     }
     return aux.str();
 }
 
+//Metodo para mostrar los Pianos que hay en el paquete
+string Paquete::mostrar_pianos() {
+    stringstream aux;
+    for(int i = 0 ; i < cant_pianos; i++){
+        aux << "Piano " << i <<":  "<< pianos[i].mostrar() << endl;
+    }
+    return aux.str();
+}
 
+//Metodo para mostrar las guitarras que hay en el paquete
+string Paquete::mostrar_violines() {
+    stringstream aux;
+    for(int i = 0 ; i < cant_violines; i++){
+        aux << "Violin " << i <<":  "<< violines[i].mostrar() << endl;
+    }
+    return aux.str();
+}
 
-//Metodo para calcular el precio final del producto con el descuento
-string Paquete_Guitarras::precio_total() {
+//Metodo para calcular el precio final del paquete de las guitarras con el descuento
+string Paquete::precio_total_guitarras() {
     float total, final;
     total = 0.0;
     final = 0.0;
     stringstream aux;
 
-    for (int i = 0; i < cant_actual; i++) {
+    for (int i = 0; i < cant_guitarras; i++) {
         total += guitarras[i].get_precio();
     }
 
-    if (cant_actual <= 5) {
-        final = total * (1 - (0.05 * cant_actual));
+    if (cant_guitarras <= 5) {
+        final = total * (1 - (0.05 * cant_guitarras));
     } else {
         final = total * .6;
     }
     aux << "El precio inicial del paquete fue: $" << total << "\nEl precio con descuento es: $"
-        << final << "\nEl cliente Ahorro: $" << total - final;
+        << final << "\nEl cliente ahorro: $" << total - final<<endl;
     return aux.str();
 
 }
+
+//Metodo para calcular el precio final del producto con el descuento
+string Paquete::precio_total_pianos() {
+    float total, final;
+    total = 0.0;
+    final = 0.0;
+    stringstream aux;
+
+    for (int i = 0; i < cant_pianos; i++) {
+        total += pianos[i].get_precio();
+    }
+
+    if (cant_pianos <= 5) {
+        final = total * (1 - (0.05 * cant_pianos));
+    } else {
+        final = total * .6;
+    }
+    aux << "El precio inicial del paquete fue: $" << total << "\nEl precio con descuento es: $"
+        << final << "\nEl cliente ahorro: $" << total - final<<endl;
+    return aux.str();
+
+}
+
+//Metodo para calcular el precio final del producto con el descuento
+string Paquete::precio_total_violines() {
+    float total, final;
+    total = 0.0;
+    final = 0.0;
+    stringstream aux;
+
+    for (int i = 0; i < cant_violines; i++) {
+        total += violines[i].get_precio();
+    }
+
+    if (cant_violines <= 5) {
+        final = total * (1 - (0.05 * cant_violines));
+    } else {
+        final = total * .6;
+    }
+    aux << "El precio inicial del paquete fue: $" << total << "\nEl precio con descuento es: $"
+        << final << "\nEl cliente ahorro: $" << total - final<<endl;
+    return aux.str();
+
+}
+
 
 
 
