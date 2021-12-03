@@ -85,7 +85,7 @@ void Guitarra::set_trastes(string tras) {
 //Metodo para mostrar las caracteristicas del objeto
 string Guitarra::mostrar() {
     stringstream aux;
-    aux << marca << " " << modelo << " " << cuerdas << " " << trastes << "\n" << porcentaje_ventas() << endl;
+    aux <<"\n"<< marca << " " << modelo << " " << cuerdas << " " << trastes << "\n" << porcentaje_ventas() << endl;
     return aux.str();
 }
 
