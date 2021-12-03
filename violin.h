@@ -83,7 +83,7 @@ void Violin::set_barbada(string bar) {
 //Metodo para mostrar las caracteristicas del objeto
 string Violin::mostrar() {
     stringstream aux;
-    aux << marca << " " << modelo << " " << cuerdas << " " << barbada << "\n" << porcentaje_ventas() << endl;
+    aux <<"\n"<< marca << " " << modelo << " " << cuerdas << " " << barbada << "\n" << porcentaje_ventas() << endl;
     return aux.str();
 }
 
