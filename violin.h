@@ -2,7 +2,7 @@
  * Proyecto A01709113
  * Sandoval Vargas Diego Ernesto
  * A01709113
- * 18/11/2021
+ * 27/05/2022
  */
 
 
@@ -53,7 +53,11 @@ public:
 
 
     //Metodo para mostrar las caracteristicas del objeto
-    string mostrar();
+    string mostrar_car(){
+        stringstream aux;
+        aux << marca << " " << modelo << " " << cuerdas << " " << barbada << "\n" << porcentaje_ventas() << endl;
+        return aux.str();
+    }
 };
 
 
@@ -78,13 +82,6 @@ void Violin::set_cuerdas(string cuer) {
 
 void Violin::set_barbada(string bar) {
     barbada = bar;
-}
-
-//Metodo para mostrar las caracteristicas del objeto
-string Violin::mostrar() {
-    stringstream aux;
-    aux <<"\n"<< marca << " " << modelo << " " << cuerdas << " " << barbada << "\n" << porcentaje_ventas() << endl;
-    return aux.str();
 }
 
 #endif
