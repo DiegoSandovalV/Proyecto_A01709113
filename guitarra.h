@@ -2,7 +2,7 @@
  * Proyecto A01709113
  * Sandoval Vargas Diego Ernesto
  * A01709113
- * 18/11/2021
+ * 27/05/2022
  */
 
 
@@ -53,7 +53,11 @@ public:
 
     //Metodo para mostrar las caracteristicas del objeto
 
-    string mostrar();
+    string mostrar_car(){
+        stringstream aux;
+        aux << marca << " " << modelo << " " << cuerdas << " " << trastes << "\n" << porcentaje_ventas() << endl;
+        return aux.str();
+    }
 
 
 };
@@ -82,11 +86,5 @@ void Guitarra::set_trastes(string tras) {
     trastes = tras;
 }
 
-//Metodo para mostrar las caracteristicas del objeto
-string Guitarra::mostrar() {
-    stringstream aux;
-    aux <<"\n"<< marca << " " << modelo << " " << cuerdas << " " << trastes << "\n" << porcentaje_ventas() << endl;
-    return aux.str();
-}
 
 #endif
