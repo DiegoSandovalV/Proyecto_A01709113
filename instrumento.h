@@ -2,7 +2,7 @@
  * Proyecto A01709113
  * Sandoval Vargas Diego Ernesto
  * A01709113
- * 18/11/2021
+ * 27/05/2022
  */
 
 
@@ -58,7 +58,9 @@ public:
     void set_ventas(int);
 
     //Otros metodos
+    string mostrar_car();
     string porcentaje_ventas();
+
 };
 
 //Getters
