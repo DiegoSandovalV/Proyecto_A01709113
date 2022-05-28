@@ -18,6 +18,9 @@ void menu() {
     cout << "7. Precio final del paquete de Guitarras" << endl;
     cout << "8. Precio final del paquete de Pianos" << endl;
     cout << "9. Precio final del paquete de Violines" << endl;
+    cout << "10. Precio del paquete de Guitarras con cupon" << endl;
+    cout << "11. Precio del paquete de Pianos con cupon" << endl;
+    cout << "12. Precio del paquete de Violines con cupon" << endl;
     cout << "0. Salir" << endl;
 
 }
@@ -63,6 +66,9 @@ int main() {
     //Variable de la opcion del menu
     int op = 1;
 
+    //Variable para el valor del cupon
+    int cupon;
+
     //Ciclo para que el menu no se cierre hasta que el usuario eliga salir
     while (op < 9 && op > 0) {
         menu();
@@ -77,17 +83,17 @@ int main() {
 
             //Se muestran las guitarras actuales
             case 1:
-                cout << guitarra1.mostrar() << guitarra2.mostrar() << guitarra3.mostrar();
+                cout << guitarra1.mostrar_car() << guitarra2.mostrar_car() << guitarra3.mostrar_car();
                 break;
 
                 //Se muestran los Pianos actuales
             case 2:
-                cout << piano1.mostrar() << piano2.mostrar() << piano3.mostrar();
+                cout << piano1.mostrar_car() << piano2.mostrar_car() << piano3.mostrar_car();
                 break;
 
                 //Se muestran los Violines actuales
             case 3:
-                cout << violin1.mostrar() << violin2.mostrar() << violin3.mostrar();
+                cout << violin1.mostrar_car() << violin2.mostrar_car() << violin3.mostrar_car();
                 break;
 
                 //Se muestran las guitarras del paquete
@@ -119,7 +125,26 @@ int main() {
             case 9:
                 cout<<paquete1.precio_total_violines();
                 break;
+
+            case 10:
+                cout<< "Ingrese cupon: " << endl;
+                cin>>cupon;
+                cout<<paquete1.precio_total_guitarras(cupon);
+                break;
+
+            case 11:
+                cout<< "Ingrese cupon: " << endl;
+                cin>>cupon;
+                cout<<paquete1.precio_total_pianos(cupon);
+                break;
+
+            case 12:
+                cout<< "Ingrese cupon: " << endl;
+                cin>>cupon;
+                cout<<paquete1.precio_total_violines(cupon);
+                break;
         }
+
     }
 
 
