@@ -35,4 +35,4 @@ Se han realizado las siguientes correcciones:
 
 4)Se creo un menu, ahora el paquete podra contener objetos de los 3 tipos presentes en el programa, se agregaron los metodos para el manejo de los paquetes de violines y pianos (asignar,mostrar y el precio final), se agrego al metodo mostrar (objeto individual) el porcentaje de ventas del producto, al metodo de porcentaje de ventas se le agrego un nuevo string que devuelve cuando el objeto no tiene ventas.
 
-5) Se actualizaron los metodos usados para mostrar caracteristicas del objeto (mostrar_car) utilizando sobreescritura, se actualizaron los metodos asigna y precio implementando en estos sobrecarga.
+5)Se actualizaron los metodos usados para mostrar caracteristicas del objeto (mostrar_car) utilizando sobreescritura, se actualizaron los metodos asigna y precio implementando en estos sobrecarga.
