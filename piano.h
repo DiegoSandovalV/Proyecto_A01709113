@@ -2,7 +2,7 @@
  * Proyecto A01709113
  * Sandoval Vargas Diego Ernesto
  * A01709113
- * 18/11/2021
+ * 27/05/2022
  */
 
 
@@ -52,7 +52,11 @@ public:
     void set_num_teclas(int);
 
     //Metodo para mostrar las caracteristicas del objeto
-    string mostrar();
+    string mostrar_car(){
+        stringstream aux;
+        aux << marca << " " << modelo << " " << sintetizador << " " << num_teclas << "\n" << porcentaje_ventas() << endl;
+        return aux.str();
+    }
 };
 
 
@@ -79,11 +83,5 @@ void Piano::set_num_teclas(int num) {
     num_teclas = num;
 }
 
-//Metodo para mostrar las caracteristicas del objeto
-string Piano::mostrar() {
-    stringstream aux;
-    aux <<"\n"<< marca << " " << modelo << " " << sintetizador << " " << num_teclas << "\n" << porcentaje_ventas() << endl;
-    return aux.str();
-}
 
 #endif
