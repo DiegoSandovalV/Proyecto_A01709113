@@ -58,7 +58,7 @@ public:
     void set_ventas(int);
 
     //Otros metodos
-    string mostrar_car();
+    virtual string mostrar_car()=0;
     string porcentaje_ventas();
 
 };
