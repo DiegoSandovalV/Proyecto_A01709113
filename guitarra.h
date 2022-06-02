@@ -1,3 +1,16 @@
+/*
+ * Proyecto A01709113
+ * Sandoval Vargas Diego Ernesto
+ * A01709113
+ * 27/05/2022
+ */
+
+
+/*Clase Guitarra
+* Contiene las variables que diferencian esta subclase de las demas, al combinar estas con las varriables de la clase padre (instrumento)
+ * se obtiene un objeto de tipo Guitarra
+*/
+
 #ifndef GUITARRA_H
 #define GUITARRA_H
 #include "instrumento.h"
