@@ -2,14 +2,14 @@
  * Proyecto A01709113
  * Sandoval Vargas Diego Ernesto
  * A01709113
- * 27/05/2022
+ * 10/06/2022
  */
 
 
 /*Clase Instrumento
- * Es la clase Padre que contiene los metodos genericos es decir getters y setters de las variables (caracteristicas)
- * que se comparten en las subclases, ademas de tener un metodo para calcular el porcentaje de venta de un cualquier
- * producto
+ * Es la clase Padre abstracta que contiene los metodos y carcateristicar a heredar en las subclases, se declara un metodo
+ * virtual que dependiendo del tipo de objeto se muestran sus caracteristicas y tiene un metodo para calcular el porcentaje
+ * de venta de un cualquier producto
 */
 
 #ifndef INSTRUMENTO_H
