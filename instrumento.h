@@ -1,15 +1,15 @@
 /*
- * Proyecto A01709113
- * Sandoval Vargas Diego Ernesto
- * A01709113
- * 10/06/2022
- */
+* Sandoval Vargas Diego Ernesto
+* A01709113
+* 10/06/2022
+*/
 
-
-/*Clase Instrumento
- * Es la clase Padre abstracta que contiene los metodos y carcateristicar a heredar en las subclases, se declara un metodo
- * virtual que dependiendo del tipo de objeto se muestran sus caracteristicas y tiene un metodo para calcular el porcentaje
- * de venta de un cualquier producto
+/*Clase paquete
+ *Es la clase donde se crea un arreglo de instrumentos, tiene metodos de asignacion para cada tipo de instrumento,
+ * tiene metodos para mostrar las caracteristicas de cada uno de los objetos en el arreglo, y calcular el preico final
+ * del paquete(arreglo) sumando los precio individuales de cada instrumento, ademas de tener un metodo para calcular
+ * el precio final si el cliente tiene un cupon, para aplicarse el cupon debe ser menor a 20% y el paquete debe tener un
+ * precio inicial mayor de 250
 */
 
 #ifndef INSTRUMENTO_H
