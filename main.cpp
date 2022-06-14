@@ -26,15 +26,17 @@ int main() {
     //defino los apuntadores objetos de ejemplo
     Guitarra* guitarra1;
     Guitarra* guitarra2;
-    //Este ejemplo no esta instanciado
+    //Este ejemplo (3) no esta asignado al paquete
     Guitarra* guitarra3;
 
     Piano* piano1;
     Piano* piano2;
+    //Este ejemplo (3) no esta asignado al paquete
     Piano* piano3;
 
     Violin* violin1;
     Violin* violin2;
+    //Este ejemplo (3) no esta asignado al paquete
     Violin* violin3;
 
 
