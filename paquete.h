@@ -1,7 +1,7 @@
 /*
 * Sandoval Vargas Diego Ernesto
 * A01709113
-* 10/06/2022
+* 14/06/2022
 */
 
 /*Clase paquete
@@ -11,7 +11,6 @@
  * el precio final si el cliente tiene un cupon, para aplicarse el cupon debe ser menor a 20% y el paquete debe tener un
  * precio inicial mayor de 250
 */
-
 #ifndef UNTITLED_PAQUETE_H
 #define UNTITLED_PAQUETE_H
 
@@ -25,7 +24,7 @@ class Paquete {
 
 private:
 
-    //Se crea el arreglo de instrumentos, definiendo como apuntador para usar polimorfismo
+    //Se crea el arreglo de instrumentos, definiendo como apuntador para implementar polimorfismo
     Instrumento* ins[50];
     int cantidad=0;
 
@@ -34,9 +33,8 @@ public:
     Paquete(){};
 
     //Metodo para asignar el objeto al arreglo
-    void asigna(Guitarra*);
-    void asigna(Piano*);
-    void asigna(Violin*);
+    void asigna(Instrumento*);
+
 
     //Metodo para mostrar las caracteristicas del instrumento
     string mostrar_instrumentos();
@@ -46,23 +44,15 @@ public:
 
     //Metodo para el calcular el precio del paquete con cupon
     string precio_final(float cupon);
+
+    //Metodo para que el usario pueda crear un objeto y se asigne al paquete
+    void crear_asignar();
+
 };
 
 //Metodo de asignacion de guitarras
-void Paquete::asigna(Guitarra *gui) {
-    ins[cantidad] = gui;
-    cantidad++;
-}
-
-//Metodo de asignacion de Pianos
-void Paquete::asigna(Piano *pi) {
-    ins[cantidad] = pi;
-    cantidad++;
-}
-
-//Metodo de asignacion de Violines
-void Paquete::asigna(Violin *vi) {
-    ins[cantidad] = vi;
+void Paquete::asigna(Instrumento *in) {
+    ins[cantidad] = in;
     cantidad++;
 }
 
@@ -76,6 +66,7 @@ string Paquete::mostrar_instrumentos() {
     return aux.str();
 }
 
+//Metodo para mostrar el precio final del paquete
 string Paquete::precio_final() {
     float total=0.0;
     stringstream aux;
@@ -86,6 +77,7 @@ string Paquete::precio_final() {
     return aux.str();
 }
 
+//Metodo para mostrar el precio final del paquete si se tiene un cupon
 string Paquete::precio_final(float cupon){
     stringstream aux;
     float total=0.0,final=0.0;
@@ -110,5 +102,81 @@ string Paquete::precio_final(float cupon){
     return aux.str();
 }
 
+//Metodo para que el usuario cree un objeto y se asigne al paquete
+void Paquete::crear_asignar(){
+    int opcion;
+    cout<<"Decide el tipo de instrumento a crear" <<endl;
+    cout<<"1)Guitarra \n" << "2)Piano \n" << "3)Violin"<<endl;
+
+    cin>>opcion;
+
+    if(opcion==1){
+        Guitarra* guitarra_usuario;
+        string mar;
+        string mod;
+        string cuer;
+        string tras;
+
+        cout<<"Ingrese la marca: "<<endl;
+        cin>>mar;
+        cout<<"Ingrese la modelo: "<<endl;
+        cin>>mod;
+        cout<<"Ingrese el tipo de cuerdas: "<<endl;
+        cin>>cuer;
+        cout<<"Ingrese el tipo de trastes: "<<endl;
+        cin>>tras;
+
+
+
+        guitarra_usuario=new Guitarra(mar,mod,0.0,cuer,tras,1,0);
+        cout<< "Caracteristicas de tu guitarra personalizada: \n" << guitarra_usuario->mostrar_car();
+        asigna(guitarra_usuario);
+
+    }
+    else if(opcion==2){
+        Piano* piano_usuario;
+        string mar;
+        string mod;
+        string sin;
+        int num;
+
+        cout<<"Ingrese la marca: "<<endl;
+        cin>>mar;
+        cout<<"Ingrese la modelo: "<<endl;
+        cin>>mod;
+        cout<<"Ingrese el tipo de sintetizador: "<<endl;
+        cin>>sin;
+        cout<<"Ingrese el tipo de trastes: "<<endl;
+        cin>>num;
+
+        piano_usuario=new Piano(mar,mod,0.0,sin,num,1,0);
+        cout<< "Caracteristicas de tu guitarra personalizada: \n" << piano_usuario->mostrar_car();
+        asigna(piano_usuario);
+
+    }
+    else if(opcion==3){
+        Violin* violin_usuario;
+        string mar;
+        string mod;
+        string cuer;
+        string bar;
+
+        cout<<"Ingrese la marca: "<<endl;
+        cin>>mar;
+        cout<<"Ingrese la modelo: "<<endl;
+        cin>>mod;
+        cout<<"Ingrese el tipo de cuerdas "<<endl;
+        cin>>cuer;
+        cout<<"Ingrese el tipo de barbada: "<<endl;
+        cin>>bar;
+
+        violin_usuario=new Violin(mar,mod,0.0,cuer,bar,1,0);
+        cout<< "Caracteristicas de tu guitarra personalizada: \n" << violin_usuario->mostrar_car();
+        asigna(violin_usuario);
+    }
+    else{
+        cout<<"Ingresa una opcion valida";
+    }
+}
 
 #endif //UNTITLED_PAQUETE_H
