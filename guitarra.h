@@ -2,7 +2,7 @@
  * Proyecto A01709113
  * Sandoval Vargas Diego Ernesto
  * A01709113
- * 27/05/2022
+ * 14/06/2022
  */
 
 
@@ -16,23 +16,26 @@
 #include "instrumento.h"
 using namespace std;
 
-
-class Guitarra: public Instrumento{
+class Guitarra : public Instrumento{
 
 private:
     string cuerdas;
     string trastes;
 
 public:
+
+    //Constructor default
     Guitarra():Instrumento(){
-        cuerdas="";
-        trastes="";
+        cuerdas = "";
+        trastes = "";
     }
 
-    Guitarra(string mar, string mod, float pre, string cuer, string tras, int uni, int ven):Instrumento(mar,mod,pre,uni,ven){
-        cuerdas=cuer;
-        trastes=tras;
+    //Constructor
+    Guitarra(string mar, string mod, float pre,string cuer, string tras, int uni, int ven):Instrumento(mar, mod, pre,uni, ven) {
+        cuerdas = cuer;
+        trastes = tras;
     }
+
 
     //Metodos
 
@@ -54,7 +57,10 @@ public:
         return aux.str();
     }
 
+
 };
+
+
 //Getters
 
 string Guitarra::get_cuerdas() {
