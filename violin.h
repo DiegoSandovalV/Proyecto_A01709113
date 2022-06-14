@@ -2,7 +2,7 @@
  * Proyecto A01709113
  * Sandoval Vargas Diego Ernesto
  * A01709113
- * 27/05/2022
+ * 10/06/2022
  */
 
 
@@ -27,13 +27,13 @@ public:
 
     //Constructor default
     Violin():Instrumento(){
-    cuerdas = "";
-    barbada = "";
+        cuerdas = "";
+        barbada = "";
     }
 
     //Constructor
     Violin(string mar, string mod, float pre,string cuer, string bar, int uni, int ven):Instrumento(mar, mod, pre,
-                                                                                                     uni, ven) {
+                                                                                                    uni, ven) {
         cuerdas = cuer;
         barbada = bar;
     }
