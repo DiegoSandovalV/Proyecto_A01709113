@@ -2,7 +2,7 @@
  * Proyecto A01709113
  * Sandoval Vargas Diego Ernesto
  * A01709113
- * 10/06/2022
+ * 14/06/2022
  */
 
 
@@ -38,7 +38,7 @@ public:
 
     //Construccion con entrada de datos
     Instrumento(string mar, string mod, float pre, int uni, int ven) : marca(mar), modelo(mod), precio(pre),
-                                                                      unidades(uni), ventas(ven) {};
+                                                                       unidades(uni), ventas(ven) {};
 
 
     //metodos
@@ -57,8 +57,10 @@ public:
     void set_unidades(int);
     void set_ventas(int);
 
-    //Otros metodos
+    //Declaracion de metodo virtual
     virtual string mostrar_car()=0;
+
+    //Metodo para calcular el porcentaje de ventas del objeto
     string porcentaje_ventas();
 
 };
@@ -107,7 +109,8 @@ void Instrumento::set_unidades(int un) {
 void Instrumento::set_ventas(int ven) {
     ventas = ven;
 }
-//otros metodos
+
+//Metodo para calcular el porcentaje de ventas del objeto
 
 string Instrumento::porcentaje_ventas(){
 
@@ -127,7 +130,6 @@ string Instrumento::porcentaje_ventas(){
         return "Posible error en unidades y ventas";
     }
 }
-
 
 
 #endif
