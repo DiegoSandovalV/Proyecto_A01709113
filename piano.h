@@ -2,7 +2,7 @@
  * Proyecto A01709113
  * Sandoval Vargas Diego Ernesto
  * A01709113
- * 27/05/2022
+ * 14/06/2022
  */
 
 
@@ -33,7 +33,7 @@ public:
 
     //Constructor
     Piano(string mar, string mod, float pre,string sin, int num, int uni, int ven):Instrumento(mar, mod, pre,
-                                                                                                     uni, ven) {
+                                                                                               uni, ven) {
         sintetizador = sin;
         num_teclas = num;
     }
