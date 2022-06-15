@@ -19,7 +19,7 @@ El programa solo corre en la consola y esta hecho con c++ standard por lo que co
 compilar con: "g++ guitarra.h piano.h violin.h main.cpp"
 correr en windows: "a.exe"
 
-En el programa vienen 3 ejemplos para cada tipo de objeto (Guitarras, Pianos y Violines), y estos vienen asignados mediante agregacion al paquete (array)
+En el programa vienen 3 ejemplos para cada tipo de objeto (Guitarras, Pianos y Violines), y 2 de estos vienen asignados mediante agregacion al paquete (array)
 
 
 
