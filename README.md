@@ -38,3 +38,5 @@ Se han realizado las siguientes correcciones:
 5)Se actualizaron los metodos usados para mostrar caracteristicas del objeto (mostrar_car) utilizando sobreescritura, se actualizaron los metodos asigna y precio implementando en estos sobrecarga.
 
 6)Se actualizo el paquete, para que dejaran de ser 3 paquetes separados (1 por cada instrumento) y se volvio un paquete que puede almacenar cualquier clase hija de instrumento, el arreglo de instrumentos paquete paso a ser uns arreglo de apuntadores, se actualizo la funcion mostrar caracteristicas y las fuinciones para mostrar el precio del paquete, para que estas mediante polimorfismo funcionaran, los ejemplos pasaron a ser apuntadores que se crean en el tiempo de ejecucion del programa
+
+7)Se creo la funcion crear_asignar() para que el usuario sea capapaz de crear un instrumento nuevo (de cualquier tipo) y se agregue de manera automatica al paquete.
